@@ -2,7 +2,7 @@
   "name": "Test05",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "start": "nodemon ./dist/main.js",
     "test": "npx jest --config jest.config.json"

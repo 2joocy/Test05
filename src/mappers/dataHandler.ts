@@ -8,13 +8,17 @@ import CreditCard from '../classes/CreditCard'
 export default class DataHandler implements DataMapperInterface{
 
     connection: Connection;
-
+    
     constructor(){
+        var serverIP = process.env.IP;
+        var user = process.env.USER;
+        var password = process.env.PASSWORD;
+        var db = process.env.DATABASE;
         this.connection = mysql.createConnection({
-            host     : '45.76.91.135',
-            user     : 'sammy',
-            password : 'password',
-            database : 'test05'
+            host     : serverIP,
+            user     : user,
+            password : password,
+            database : db
           });
           console.log("Successfully connected to db");
           this.connection.connect();
